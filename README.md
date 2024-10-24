@@ -44,6 +44,13 @@ The service will be available at http://localhost:8080.
    ```bash
    docker run -p 8084:8080 customers-service
 
+### Running with Docker compose
+ **Start all services with docker compose**:
+ After creating docker images for every microservice run this command:
+
+    docker-compose up
+
+
 ### API Endpoints
 The financebff exposes the following API endpoints:
 1. **Create a new account for an existing customer**:
