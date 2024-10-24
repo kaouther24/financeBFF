@@ -1,14 +1,15 @@
-package com.bank.bff.configuration;
+package com.bank.bff.service;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 
-@Component
-@ConfigurationProperties(prefix = "service")
+@Configuration
 public class ServiceConfig {
-
+    @Value("${service.customers.url}")
     private String customersUrl;
+    @Value("${service.transactions.url}")
     private String transactionsUrl;
+    @Value("${service.accounts.url}")
     private String accountsUrl;
 
     public String getCustomersUrl() {
